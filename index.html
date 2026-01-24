@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>City Title Screen</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://esm.sh/three@0.160.0",
+                "three/addons/": "https://esm.sh/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="ui-layer">
+        <div id="title-card">
+            <h1>METROPOLIS</h1>
+            <p class="subtitle">Simulation Title Screen</p>
+        </div>
+
+        <div id="main-menu" class="menu-panel">
+            <button id="btn-continue" class="btn hidden">Continue</button>
+            <button id="btn-start" class="btn">New Game</button>
+            <button id="btn-settings" class="btn">Settings</button>
+        </div>
+
+        <div id="settings-menu" class="menu-panel hidden">
+            <h2>Settings</h2>
+            <div class="setting-row">
+                <label>Traffic Density</label>
+                <input type="range" min="1" max="10" value="5" id="slider-density">
+            </div>
+            <div class="setting-row">
+                <label>Audio Volume</label>
+                <input type="range" min="0" max="100" value="50" id="slider-volume">
+            </div>
+            <button id="btn-back" class="btn secondary">Back</button>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
